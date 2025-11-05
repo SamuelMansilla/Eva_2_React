@@ -36,7 +36,7 @@ function App() {
           <Route element={<PublicLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/productos" element={<ProductosPage />} />
-            <Route path="/producto/:id" element={<DetalleProductoPage />} />
+            <Route path="/producto/:code" element={<DetalleProductoPage />} />
             <Route path="/nosotros" element={<NosotrosPage />} />
             <Route path="/blogs" element={<BlogsPage />} />
             <Route path="/blog/:id" element={<DetalleBlogPage />} />
