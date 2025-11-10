@@ -12,6 +12,9 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
+/* Esta regla no parece estar siendo usada en tu JSX, 
+   pero la mantengo por si acaso.
+*/
 .carrito-item .d-flex.align-items-center.mb-2.mb-md-0 {
   display: flex;
   align-items: center;
@@ -87,22 +90,11 @@ button.btn-outline-secondary {
   display: inline-block;
 }
 
-@media (max-width: 768px) {
-  .carrito-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .carrito-item .d-flex.align-items-center.gap-2 {
-    margin-top: 10px;
-  }
-}
-
 /* Sticky resumen del carrito */
 .card.resumen {
   position: sticky; 
   top: 20px;
-  z-index: 1000;    
+  z-index: 1000; 
   background-color: #111;
   color: #fff;
 }
@@ -110,4 +102,29 @@ button.btn-outline-secondary {
 body.menu-open .card.resumen {
   pointer-events: none;
   opacity: 0.5; 
+}
+
+
+/* ================================================ */
+/* ===== MEJORA RESPONSIVE PARA MÓVILES ===== */
+/* ================================================ */
+
+@media (max-width: 768px) {
+  /* 1. Apila los elementos verticalmente */
+  .carrito-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* 2. (LA CLAVE) Fuerza a los dos grupos hijos (info y botones)
+        a ocupar el 100% del ancho de la tarjeta.
+  */
+  .carrito-item > .d-flex {
+    width: 100%;
+  }
+
+  /* 3. Añade un espacio de separación entre los grupos */
+  .carrito-item .d-flex.align-items-center.gap-2 {
+    margin-top: 15px;
+  }
 }

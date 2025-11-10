@@ -73,3 +73,14 @@ input:focus, textarea:focus {
   font-size: 0.9rem;
   text-shadow: 0 0 6px var(--color-secondary, #1E90FF);
 }
+
+/* ================================================ */
+/* ===== MEJORA RESPONSIVE PARA MÓVILES ===== */
+/* ================================================ */
+
+@media (max-width: 768px) {
+  form {
+    /* Reduce el padding en pantallas pequeñas */
+    padding: 1.5rem;
+  }
+}

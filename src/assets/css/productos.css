@@ -94,3 +94,25 @@
   color: var(--color-text-alt); /* Color grisáceo para el número de reseñas */
   font-size: 12px; /* Más pequeño que las estrellas */
 }
+
+/* ================================================ */
+/* ===== MEJORA RESPONSIVE PARA MÓVILES ===== */
+/* ================================================ */
+
+@media (max-width: 768px) {
+  .productos {
+    padding: 30px 15px;
+  }
+
+  .productos h2 {
+    font-size: 32px;
+  }
+
+  .card img {
+    height: 160px; /* Hacemos la imagen un poco más pequeña en móvil */
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
