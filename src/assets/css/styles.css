@@ -172,7 +172,7 @@ footer {
 .footer-section p { color: var(--color-text-alt); margin-bottom: 10px; }
 .footer-section i { margin-right: 10px; color: var(--color-primary); }
 .social-share { display: flex; gap: 1rem; justify-content: start; margin: 1rem 0; }
-.social-btn { padding: 0.5rem; border-radius: 50%; background: rgba(30, 144, 255, 0.2); color: #1E90FF; text-decoration: none; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+.social-btn { /* padding: 0.5rem; */ border-radius: 50%; background: rgba(30, 144, 255, 0.2); color: #1E90FF; text-decoration: none; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
 .social-btn:hover { background: #1E90FF; color: #000; }
 
 /* ===== ANIMACIONES ===== */
@@ -285,12 +285,13 @@ footer {
 /* ================================================ */
 
 @media (max-width: 768px) {
-  /* Centra el texto en las columnas del footer en móvil */
-  .footer-section {
-    text-align: center;
-  }
+  /* Se elimina la regla de 'text-align: center' para .footer-section,
+     así el texto ("Somos una tienda...") mantiene su alineación izquierda. */
+     .footer-section {
+         text-align: center;
+       }
   
-  /* Centra los íconos de redes sociales en móvil */
+  /* Centra SÓLO los íconos de redes sociales en móvil */
   .social-share {
     justify-content: center;
   }
