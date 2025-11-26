@@ -125,7 +125,7 @@ const HomePage = () => {
                              <div className="mb-3 animate-text-delay3">
                                  <span className="material-icons align-middle">local_shipping</span> Envío a todo Chile<br />
                                  <span className="material-icons align-middle">sports_esports</span> Amplia variedad de productos<br />
-                                 <span className="material-icons align-middle">star</span> Calidad y confianza garantizadas
+                                 <span className="material-icons align-middle">star</span> Calidad y confianza garantizada
                              </div>
                              <Link to="/productos" className="btn btn-primary btn-lg animate-button">Explora nuestros productos</Link>
                          </div>
